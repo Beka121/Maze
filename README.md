@@ -92,8 +92,16 @@ Solved Maze
 ## Requirements
 
 - **C++** with a C++11 or later compiler.
-- **Standard Library** for `vector`, `stack`, `cstdlib`, `ctime`, and `algorithm`.
 
+## Video 
+
+#Define DFS
+
+<p align="center">
+    <a href="https://youtu.be/9d7itqKcK10?si=18MVX1_zuN9Lvgvh">
+        <img src="https://img.shields.io/badge/YouTube-090909?style=for-the-badge&logo=youtube&logoColor=FF0000">
+    </a>
+</p>
 ## Thank You
 
 If you have any questions or suggestions, feel free to reach out!
