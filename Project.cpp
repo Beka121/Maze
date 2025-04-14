@@ -8,7 +8,7 @@
 using namespace std;
 
 const int SIZE = 12;
-const char WALL = '|';
+const char WALL = '#';
 const char PATH = ' ';
 const char START = 'S';
 const char EXIT = 'E';
