@@ -1,17 +1,11 @@
-
-class Maze {
-private:
-    vector<vector<char>> grid;
-    	vector<vector<bool>> solutionPath;
-    	Point start;
-    	Point exit;
-//map
-public:
-    Maze() : grid(SIZE, vector<char>(SIZE, WALL)), 
-             solutionPath(SIZE, vector<bool>(SIZE, false)),
-             start(1, 1), exit(SIZE-2, SIZE-2) {
-        srand(time(0));
-        generate();
-        placeStartExit();
+void print() const {
+    for (int y = 0; y < SIZE; y++) {
+        for (int x = 0; x < SIZE; x++) {
+            if (grid[y][x] == START) cout << START << ' ';
+            else if (grid[y][x] == EXIT) cout << EXIT << ' ';
+            else if (solutionPath[y][x]) cout << SOLUTION << ' ';
+            else cout << grid[y][x] << ' ';
+        }
+        cout << endl;
     }
-
+}
