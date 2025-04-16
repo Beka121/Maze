@@ -1,24 +1,16 @@
-private:
-    bool findPath(int x, int y, vector<vector<bool>>& visited) {
-        if (x < 0 || x >= SIZE || y < 0 || y >= SIZE || visited[y][x] || grid[y][x] == WALL) {
-            return false;
-        }
+int main() {
+    Maze maze;
 
-        visited[y][x] = true;
-
-        if (Point(x, y) == exit) {
-            solutionPath[y][x] = true;
-            return true;
-        }
-
-        if (findPath(x+1, y, visited) || findPath(x-1, y, visited) || 
-            findPath(x, y+1, visited) || findPath(x, y-1, visited)) {
-            if (grid[y][x] == PATH) {
-                solutionPath[y][x] = true;
-            }
-            return true;
-        }
-
-        return false;
+    cout << "Generated Maze:" << endl;
+    maze.print();
+// output
+    cout << "\nSolving Maze..." << endl;
+    if (maze.solve()) {
+        cout << "\nSolved Maze" << endl;
+        maze.print();
+    } else {
+        cout << "No solution found!" << endl;
     }
-};
+
+    return 0;
+}
